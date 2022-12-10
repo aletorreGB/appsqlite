@@ -1,0 +1,28 @@
+<ion-header [translucent]="false" color="secondary">
+  <ion-toolbar>
+    <ion-title>
+      GalenosME
+    </ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="logout()" >
+        <ion-icon slot="end" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment value="home" (ionChange)="segmentChanged($event)">
+      <ion-segment-button  value="hora">
+        <ion-icon name="home"></ion-icon>
+      </ion-segment-button>
+
+      <ion-segment-button value="datos">
+        <ion-icon name="calendar-outline"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- Aquí se desplegara todos los Component que se declararon como children en
+  HomePageModule -->
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>
